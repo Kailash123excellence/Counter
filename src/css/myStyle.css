@@ -1,0 +1,44 @@
+body{
+  max-width: 100%;  
+  background-image: linear-gradient(to right, blue , white );
+}
+
+.CounterMain{
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.handleAdd{
+  background-color: rgb(83, 62, 62);
+  color: white;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  width: 150px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.CountButton{
+  height: 50px;
+  width: 130px;
+  border-radius: 10px;
+}
+
+.counterBoxStart{
+  width: fit-content;
+  margin: auto;
+}
+.counterNumStart{
+  background-color: white;
+  width: 130px;
+  height: 80px;
+  border-radius: 5px;
+  text-align: center;
+}
+.showNum{
+margin: 10px;
+padding-top:20px;
+font-size: 30px;
+}

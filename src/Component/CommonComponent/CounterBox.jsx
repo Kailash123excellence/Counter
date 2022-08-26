@@ -1,38 +1,30 @@
-import React, { useEffect } from 'react'
-import { useState } from 'react'
-
-export default function CounterBox() {
-  const [num,setNum]=useState(0)
-var start=false;
-
-
-  function startCounting(){
-    start=!start
-    console.log(start);
-    if(start===true){
-      var roll= setInterval(() => {
-        console.log("hello");
-      }, 1000);  
-    }else{
-      roll.clearInterval()
-    }
-    // start=!true
-    // if(!start){
-    //   setNum(num+1)
-    // }else{
-    
-    // }
-    
-  }
+import React,{ useState } from 'react'
+import SumCounter from './SumCounter'
+export default function CounterBox(props) {
+  const { num, setNum } = props;
+  // const [number, setNumber ] = useState(0);
+  const [startCount, setStartCount] = useState(0);
   
-  return (
-    <>
-      <div className="counterBoxStart">
-        <button className='CountButton'onClick={startCounting}>Start Counter</button>
-        <div className="counterNumStart">
-          <p className='showNum'>{num}</p>
-        </div>
-      </div>
-    </>
-  );
+  function handleCounting(){
+  if(startCount){
+  clearInterval(startCount)
+  setStartCount(0)
+  return;
+ }
+    const startCountID=setInterval(() => {
+      setNum( prevNum=>prevNum + 1);
+    }, 1000);
+    setStartCount(startCountID)
+}
+
+return (
+  <>
+    <div className="counterBoxStart">
+      <button className="CountButton" onClick={handleCounting}>
+        {startCount ? "Stop Counting" : "Start Counting"}
+      </button>
+      <p className="showNum">{num}</p>
+    </div>
+  </>
+);
 }

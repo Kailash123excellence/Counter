@@ -1,15 +1,15 @@
-body{
-  max-width: 100%;  
-  background-image: linear-gradient(to right, blue , white );
+body {
+  max-width: 100%;
+  background-image: linear-gradient(to right, blue, white);
 }
 
-.CounterMain{
+.CounterMain {
   margin: 20px;
   display: flex;
   justify-content: space-between;
 }
 
-.handleAdd{
+.handleAdd {
   background-color: rgb(83, 62, 62);
   color: white;
   height: 50px;
@@ -20,25 +20,52 @@ body{
   font-weight: bold;
 }
 
-.CountButton{
+.CountButton {
+  margin-top: 50px;
+  border: none;
   height: 50px;
   width: 130px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   border-radius: 10px;
 }
+.sumBtn {
+  position: absolute;
+  right: 5%;
+  width: 40px;
+  text-align: center;
+  background-color: rgb(83, 62, 62);
+  color: white;
+  border-radius: 80%;
 
-.counterBoxStart{
+  font-size: large;
+  font-weight: bold;
+}
+.counterBoxStart {
   width: fit-content;
   margin: auto;
+  margin: 20px;
 }
-.counterNumStart{
+.counterNumStart {
   background-color: white;
   width: 130px;
   height: 80px;
   border-radius: 5px;
   text-align: center;
 }
-.showNum{
-margin: 10px;
-padding-top:20px;
-font-size: 30px;
+.showNum {
+  background-color: white;
+  border-radius: 10px;
+  width: 120px;
+  height: 80px;
+  text-align: center;
+  margin: 5px;
+  margin-top: 20px;
+  padding-top: 20px;
+  font-size: 30px;
+}
+.ArrBox {
+  display: flex;
+  flex-direction: row;
 }

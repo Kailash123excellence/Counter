@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
 
 export default function SumCounter(props) {
-  const { num } = props;
+ const {number,setNumber}=props
+ const [total,setTotal]=useState(0)
 
-  return <div className="sumBtn">{num}</div>;
+  return (
+    <div className="sumBtn">{number}</div>
+  )
 }

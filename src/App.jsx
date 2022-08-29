@@ -1,9 +1,9 @@
 import React from "react";
-import Counter from "./Component/Counter";
+import AddCounter from "./Component/AddCounter";
 export default function App() {
   return (
     <>
-    <Counter/>
+    <AddCounter/>
     </>
   );
 }
